@@ -10,6 +10,7 @@ permissions: {}
 
 jobs:
   publish:
+    if: ${{ vars.PKG_PR_NEW_ENABLED == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
